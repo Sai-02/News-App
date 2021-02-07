@@ -22,6 +22,29 @@ Navbar
   display: grid;
   grid-template-columns: 4fr 1fr 1fr 1fr;
 }
+/*
+================================
+
+Welcome Section
+
+=================================
+ */
+.welcome-section {
+  margin-top: 40px;
+  text-align: center;
+  color: rgb(33, 46, 4);
+}
+.fetch-news {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: none;
+}
+.fetch-news:hover {
+  background: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 /*
 =================================
