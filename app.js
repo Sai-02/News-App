@@ -9,6 +9,16 @@ fetchNews.addEventListener("click", function () {
 });
 
 function showNews() {
+  // $.ajax({
+  //   url: `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`,
+  //   type: "GET",
+  //   onsuccess: function(r){
+  //     console.log(r);
+  //   },
+  //   failure: function(r){
+  //     console.log(r);
+  //   }
+  // })
   let xhr = new XMLHttpRequest();
   xhr.open(
     "GET",
@@ -20,6 +30,12 @@ function showNews() {
   //   "http://newsapi.org/v2/top-headlines?country=in&apiKey=484fce9988ba44c5ae146336a846dd6d",
   //   true
   // );
+
+  // const url = `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${apiKey}`;
+  // axios.get(url)
+  // .then(data=>console.log(data))
+  // .catch(err=>console.log(err))
+
 
   xhr.onload = function () {
     if (this.status == 200) {
