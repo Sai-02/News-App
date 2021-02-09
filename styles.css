@@ -16,12 +16,20 @@ Navbar
 */
 
 .nav {
-  background: rgb(31, 28, 28);
-  color: white;
   padding: 1rem 0.5rem;
-  display: grid;
-  grid-template-columns: 4fr 1fr 1fr 1fr;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 40px;
 }
+
+.nav img {
+  max-height: 3rem;
+}
+
 /*
 ================================
 
@@ -33,16 +41,33 @@ Welcome Section
   margin-top: 40px;
   text-align: center;
   color: rgb(33, 46, 4);
+  display: grid;
+  justify-content: center;
+  /* place-items: center; */
 }
 .fetch-news {
   margin-top: 1rem;
   padding: 0.5rem;
   background: none;
 }
-.welcome-section hr{
-  max-width: 80vw;
-  justify-self: center;
+.welcome-section h1 {
+  color: brown;
+  font-size: 1.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.welcome-section hr {
+  width: 100%;
+  min-width: 60vw;
+  max-width: 100vw;
+  /* justify-self: center; */
   text-align: center;
+}
+.welcome-section img {
+  justify-self: center;
+  align-self: center;
+}
+.hr-container {
+  margin-top: 1rem;
 }
 .fetch-news:hover {
   background: red;
@@ -132,17 +157,17 @@ News Section
   color: rgb(99, 107, 104);
 }
 .date {
-  justify-self: start;
+  /* justify-self: start; */
 }
 .color {
   color: rgb(228, 129, 9);
 }
 .date-source-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 .news-source {
-  justify-self: end;
+  /* justify-self: end; */
 }
 .read-more-btn-container {
   margin-top: 1rem;

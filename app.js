@@ -5,7 +5,11 @@ let welcomeSection = document.getElementById("welcome-section");
 
 const fetchNews = document.getElementById("fetch-news");
 fetchNews.addEventListener("click", function () {
-  showNews();
+  welcomeSection.innerHTML = `<h3>Fetching the latest news</h3>
+  <img src="./Images/loading.gif" alt="" >`;
+  setTimeout(() => {
+    showNews();
+  }, 2000);
 });
 
 function showNews() {
@@ -36,7 +40,7 @@ function showNews() {
   // .then(data=>console.log(data))
   // .catch(err=>console.log(err))
 
-
+  xhr.onreadystatechange;
   xhr.onload = function () {
     if (this.status == 200) {
       let json = JSON.parse(this.responseText);
@@ -58,9 +62,7 @@ function showNews() {
         <div class="news-article-content">
           <div class="date-source-container">
             <span class="date color">${element.publishedAt}</span>
-            <span class="news-source"
-              >Source: <span class="color">${element.source.name}</span></span
-            >
+            
           </div>
           <h3>
             ${element.title}
@@ -75,13 +77,15 @@ function showNews() {
       </article>`;
       });
       newsSection.innerHTML = newsSectionHtml;
-      welcomeSection.innerHTML = `<h1> Here are your top news !!!
-      <hr>`;
+      welcomeSection.innerHTML = `
+      <h1> Here are your top news!!!</h1>
+      <div class="hr-container"><hr></div>
+      
+      `;
       console.log("welcome changed");
     } else {
       document.getElementById("welcome-section").style.display = "none";
       document.getElementById("error-section").style.display = "block";
-      // newsSection.innerHTML = `<h2> Some error occured. Try after some time`;
     }
   };
   xhr.send();
