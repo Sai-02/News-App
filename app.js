@@ -1,6 +1,7 @@
 let apiKey = "484fce9988ba44c5ae146336a846dd6d";
 let source = "the-times-of-india";
 let newsSection = document.getElementById("news-section");
+let welcomeSection = document.getElementById("welcome-section");
 
 const fetchNews = document.getElementById("fetch-news");
 fetchNews.addEventListener("click", function () {
@@ -58,6 +59,13 @@ function showNews() {
       </article>`;
       });
       newsSection.innerHTML = newsSectionHtml;
+      welcomeSection.innerHTML = `<h1> Here are your top news !!!
+      <hr>`;
+      console.log("welcome changed");
+    } else {
+      document.getElementById("welcome-section").style.display = "none";
+      document.getElementById("error-section").style.display = "block";
+      // newsSection.innerHTML = `<h2> Some error occured. Try after some time`;
     }
   };
   xhr.send();

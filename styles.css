@@ -39,11 +39,32 @@ Welcome Section
   padding: 0.5rem;
   background: none;
 }
+.welcome-section hr{
+  max-width: 80vw;
+  justify-self: center;
+  text-align: center;
+}
 .fetch-news:hover {
   background: red;
   border: none;
   color: white;
   cursor: pointer;
+}
+/*
+==================================
+
+Error Section
+
+=================================
+ */
+.error-section {
+  text-align: center;
+  display: none;
+}
+
+.error-section img {
+  max-width: 70vw;
+  max-height: 60vh;
 }
 
 /*
@@ -72,7 +93,9 @@ News Section
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
+.news-img-container {
+  max-height: 440px;
+}
 .news-img-container img {
   max-width: 100%;
   max-height: 100%;
